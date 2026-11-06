@@ -1,0 +1,13 @@
+name: second-push
+on: push
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: print kernel
+        run: uname -r
+      - name: file-listing
+        run: ls
+
