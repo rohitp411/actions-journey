@@ -1,3 +1,5 @@
+name: three-step deploy
+on: push
 jobs:
   Deploy:
     runs-on: ubuntu-latest
@@ -5,5 +7,5 @@ jobs:
       - name: Run tests
         run: echo "tests ran successfully"
       - name: Deploy
-        if: github.ref == "refs/heads/main"
+        if: github.ref == 'refs/heads/main'
         run: echo "Deploying"
