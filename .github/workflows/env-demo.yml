@@ -1,0 +1,20 @@
+name: variables
+on: push
+env:
+  APP_NAME: journey
+jobs:
+  var_build:
+    runs-on: ubuntu-latest
+    env:
+      LOG_LEVEL: info
+    steps:
+      - name: echo app
+        run: |
+          echo "$APP_NAME"
+          echo "$LOG_LEVEL"
+      - name: override the env
+        env: 
+          LOG_LEVEL: debug
+        run: | 
+          echo "$APP_NAME"
+          echo "$LOG_LEVEL"
