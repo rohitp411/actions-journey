@@ -1,0 +1,8 @@
+name: region
+on: push
+jobs:
+  region:
+    runs-on: ubuntu-latest
+    steps:
+      - name: command
+        run: echo "The region is ${{ vars.DEPLOY_REGION }}"
