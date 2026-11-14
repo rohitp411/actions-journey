@@ -1,22 +1,9 @@
-name: parallel
+name: test the secret
 on: push
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: info
-        run: echo "linting" 
-
-  unit-tests:
-    runs-on: ubuntu-latest
-    steps:
-      - name: testing
-        run: echo "testing successfully"
-
-  package:
-    runs-on: ubuntu-latest
-    needs: [lint, unit-tests]
-    steps:
-      - name: message
-        run: echo "packaging done successfully"
-
+  test:
+    uses: ./.github/workflows/notify.yml
+    with:
+      environment: production
+    secrets:
+      NOTIFY_TOKEN: ${{ secrets.NOTIFY_TOKEN }}
