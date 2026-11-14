@@ -1,0 +1,10 @@
+name: checks
+on: workflow_call
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: runs a echo
+        run: echo "from the check pipeline workflow"
