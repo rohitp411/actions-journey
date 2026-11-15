@@ -1,2 +1,2 @@
 # actions-journey
-![tidy](https://github.com/$login/actions-journey/actions/workflows/tidy.yml/badge.svg)
+![tidy](https://github.com/rohitp411/actions-journey/actions/workflows/tidy.yml/badge.svg)
