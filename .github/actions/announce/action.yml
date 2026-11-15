@@ -7,6 +7,6 @@ inputs:
 runs:
   using: composite
   steps:
-    - run: echo "The app name is ${{ inputs.app-name }}
-
+    - run: echo "The app name is ${{ inputs.app-name }}"
+      shell: bash
 
