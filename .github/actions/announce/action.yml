@@ -1,0 +1,12 @@
+name: announce
+description: Print of start-of-job announcement
+inputs:
+  app-name:
+    description: the name of the app being built 
+    required: true
+runs:
+  using: composite
+  steps:
+    - run: echo "The app name is ${{ inputs.app-name }}
+
+
